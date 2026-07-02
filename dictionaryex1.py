@@ -69,10 +69,113 @@ print(squares)
 squares = {x:x*x for x in range(1,21) if x%2==0}
 print(squares)
 
+swapped = {}
+for key in dict2:
+    swapped[dict2[key]] = key
+print(swapped)
+
+for values in sorted(dict2):
+    print(values, ":", dict2[values])
+for keys in sorted(dict2):
+    print(keys, ":", dict2[keys])
+
+students = {
+    "student1": {
+        "name": "manvitha",
+        "age": 17,
+        "marks": 95
+    },
+    "student2": {
+        "name":"bindu",
+        "age": 18,
+        "marks": 96
+    },
+    "student3":{
+        "name":"lokhya",
+        "age": 19,
+        "marks": 92
+    }
+}
+print(students)
+print(students["student2"]["marks"])
+students["student3"]["age"]= 20
+print(students)
+
+d = {
+    "a": 10,
+    "b": 20,
+    "c": 10,
+    "d": 30,
+    "e": 20
+}
+
+freq = {}
+
+for value in d.values():
+    if value in freq:
+        freq[value] += 1
+    else:
+        freq[value] = 1
+
+for key in d:
+    if freq[d[key]] > 1:
+        print(key)
+    
+new_dict = {}
+for key in d:
+    if d[key] not in new_dict.values():
+        new_dict[key] = d[key]
+print(new_dict)
 
 
+keys = ["name","age","city"]
+values = ["manvitha",17,"hyderabad"]
+students = {}
+for i in range(len(keys)):
+    students[keys[i]] = values[i]
+print(students)
 
 
+d1 = {
+    "name": "Manvitha",
+    "age": 17,
+    "grade": "A"
+}
+
+d2 = {
+    "age": 18,
+    "grade": "B",
+    "city": "Hyderabad"
+}
+
+for key in d1:
+    if key in d2:
+        print(key)
 
 
+students = {
+    "Manvitha": 85,
+    "Rahul": 70,
+    "Priya": 92,
+    "Kiran": 68
+}
 
+for name in students:
+    if students[name] > 75:
+        print(name)
+
+cart = {
+    "Apple": 2,
+    "Milk": 1,
+    "Bread": 3
+}
+
+cart["Eggs"] = 12
+
+cart["Milk"] = 2
+
+del cart["Bread"]
+
+print(cart)
+
+print("Total items in cart:", len(cart))
